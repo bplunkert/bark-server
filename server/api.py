@@ -74,10 +74,9 @@ app.add_middleware(
 )
 
 
-@app.get("/hc")
-async def health_check():
+@app.get("/ping")
+async def ping():
     return "OK"
-
 
 @app.post("/generate", response_class=StreamingResponse)
 def generate(req: GenerateRequest = Body(...)):
