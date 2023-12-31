@@ -15,4 +15,6 @@ RUN python -c "from model import load;load(True);"
 
 COPY server/api.py api.py
 
+EXPOSE 8080
+
 CMD ["python", "api.py"]
